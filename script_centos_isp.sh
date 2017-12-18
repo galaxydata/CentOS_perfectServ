@@ -25,7 +25,7 @@ echo "NOZEROCONF=yes" >> /etc/sysconfig/network
 
 # Configuration of repository for CentOS
 configure_repo() {
-  yum -y install wget epel-release >> $LOG 2>&1
+  yum -y install wget epel-release yum-utils >> $LOG 2>&1
 
   echo -e "[\033[33m*\033[0m] Installing & configuring epel, rpmforge repos..."
   rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY* >> $LOG 2>&1 || echo -e "[\033[31mX\033[0m] Error importing key /etc/pki/rpm-gpg/RPM-GPG-KEY.dag.txt"
