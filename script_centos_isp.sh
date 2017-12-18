@@ -36,8 +36,8 @@ configure_repo() {
 
   yum install yum-priorities -y >> $LOG 2>&1 echo -e "[\033[31mX\033[0m] Error installing yum-priorites"
   awk 'NR== 2 { print "priority=10" } { print }' /etc/yum.repos.d/epel.repo > /tmp/epel.repo
-  rm /etc/yum.repos.d/epel.repo -f
-  mv /tmp/epel.repo /etc/yum.repos.d
+  #rm /etc/yum.repos.d/epel.repo -f
+  #mv /tmp/epel.repo /etc/yum.repos.d
 
 }
 
