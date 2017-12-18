@@ -48,7 +48,7 @@ update_system() {
 
 install_required_packages() {
   echo -e "[\033[33m*\033[0m] Installing required packages"
-  yum install -y vim htop iftop iotop net-tools nmap screen git expect openssl >> $LOG 2>&1 || echo -e "[\033[31mX\033[0m] Error installing base packages"
+  yum install -y vim htop iftop iotop net-tools nmap screen git expect openssl mod_ssl >> $LOG 2>&1 || echo -e "[\033[31mX\033[0m] Error installing base packages"
   echo -e "[\033[33m*\033[0m] Installing Development Tools"
   yum groupinstall -y 'Development Tools'  >> $LOG 2>&1 || echo -e "[\033[31mX\033[0m] Error installing Dev Tools metapackage"
 }
